@@ -22,15 +22,10 @@ function addButton(text : string,name : string,code : string,parent : Instance)
 	Button.TextSize = 14.000
 	Button.TextStrokeTransparency = 0.000
 	Button.TextWrapped = true
-
+	
 	pcall(function()
 		local localScript = Instance.new("LocalScript")
 		localScript.Name = "MainScript"
-		print([[
-		script.Parent.Activated:Connect(function()
-			]] .. code .. [[
-		end)
-		]])
 		localScript.Source = [[
 		script.Parent.Activated:Connect(function()
 			]] .. code .. [[
