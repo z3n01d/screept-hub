@@ -26,11 +26,11 @@ function addButton(text : string,name : string,code : string,parent : Instance)
 	pcall(function()
 		local localScript = Instance.new("LocalScript")
 		localScript.Name = "MainScript"
+		localScript.Parent = Button
 		localScript.Source = [[
 		script.Parent.Activated:Connect(function()]] 
 			.. code .. [[
 		end)]]
-		localScript.Parent = Button
 	end)
 
 	UICorner.CornerRadius = UDim.new(0, 32)
