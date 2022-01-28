@@ -27,10 +27,9 @@ function addButton(text : string,name : string,code : string,parent : Instance)
 		local localScript = Instance.new("LocalScript")
 		localScript.Name = "MainScript"
 		localScript.Source = [[
-		script.Parent.Activated:Connect(function()
-			]] .. code .. [[
-		end)
-		]]
+		script.Parent.Activated:Connect(function()]] 
+			.. code .. [[
+		end)]]
 		localScript.Parent = Button
 	end)
 
