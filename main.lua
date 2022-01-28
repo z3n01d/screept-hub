@@ -26,7 +26,11 @@ function addButton(text : string,name : string,code : string,parent : Instance)
 	pcall(function()
 		local localScript = Instance.new("LocalScript")
 		localScript.Name = "MainScript"
-		localScript.Source = "script.Parent.MouseButton1Click:Connect(function()\n	" .. code .. "\n" .. "end)"
+		localScript.Source = [[
+		script.Parent.Activated:Connect(function()
+			]] .. code .. [[
+		end)
+		]]
 		localScript.Parent = Button
 	end)
 
